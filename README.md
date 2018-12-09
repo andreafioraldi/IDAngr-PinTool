@@ -1,2 +1,2 @@
 # IDAngr-PinTool
-PinTools skeletons for state synchronization with IDAngr
+PinTool skeleton for state synchronization with IDAngr
