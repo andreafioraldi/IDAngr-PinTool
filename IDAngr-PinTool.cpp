@@ -1,5 +1,5 @@
 #include "pin.H"
-#include <sstream>
+#include "IDAngr-Pin.h"
 
 static BOOL DebugInterpreter(THREADID, CONTEXT *, const string &, string *, VOID *);
 
@@ -17,14 +17,15 @@ int main(int argc, char *argv[])
 }
 
 
-static BOOL DebugInterpreter(THREADID, CONTEXT *ctxt, const string &cmd, string* result, VOID *)
+static BOOL DebugInterpreter(THREADID tid, CONTEXT *ctxt, const string &cmd, string* result, VOID *)
 {
-    if (cmd == "getpid")
+	if (cmd == "idangr_getpid")
     {
-        std::ostringstream ss;
-        ss << PIN_GetPid();
-        *result = ss.str();
-        return TRUE;
+		return GetStrPid(result);
     }
+	if (cmd == "idangr_vmmap")
+	{
+		return VMMap(result);
+	}
     return FALSE;
 }

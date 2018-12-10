@@ -23,5 +23,16 @@
     <ClCompile Include="IDAngr-PinTool.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IDAngr-Functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WinHeaderStub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IDAngr-Pin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
