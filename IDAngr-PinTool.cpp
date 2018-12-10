@@ -19,11 +19,11 @@ int main(int argc, char *argv[])
 
 static BOOL DebugInterpreter(THREADID tid, CONTEXT *ctxt, const string &cmd, string* result, VOID *)
 {
-	if (cmd == "idangr_getpid")
+	if (cmd == "getpid")
 	{
 		return GetStrPid(result);
 	}
-	if (cmd == "idangr_vmmap")
+	if (cmd == "vmmap")
 	{
 		return VMMap(result);
 	}
